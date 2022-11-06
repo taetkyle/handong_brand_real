@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:his_brand_cupang/mycupangpage.dart';
 import 'searchpage.dart';
+import 'catagorispage.dart';
+import 'searchpage.dart';
+import 'shoppingcart.dart';
 
 void main() {
   runApp(HisPang());
@@ -29,6 +33,7 @@ class HisPangExt extends StatefulWidget {
 class _HisPangExtState extends State<HisPangExt> {
   int currentIndex = 2;
   PageController controller = PageController(initialPage: 0);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -130,10 +135,12 @@ class _HisPangExtState extends State<HisPangExt> {
                   Container(height: 140, color: Colors.green)
                 ])
               : currentIndex == 1
-                  ? Text('1')
+                  ? searchpage()
                   : currentIndex == 0
-                      ? Text('0')
-                      : Text('3')),
+                      ? catagorispage()
+                      : currentIndex == 3
+                          ? mycupangpage()
+                          : shoppingcart()),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Color.fromARGB(255, 27, 109, 176),
         unselectedItemColor: Colors.grey,
@@ -167,19 +174,10 @@ class _HisPangExtState extends State<HisPangExt> {
               ),
               label: '마이쿠팡'),
           BottomNavigationBarItem(
-              icon: IconButton(
-                icon: Icon(
-                  Icons.shopping_cart_outlined,
-                  size: 30,
-                  color: Colors.grey,
-                ),
-                onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (BuildContext context) => searchpage(),
-                    ),
-                  );
-                },
+              icon: Icon(
+                Icons.shopping_cart_outlined,
+                size: 30,
+                color: Colors.grey,
               ),
               label: '장바구니'),
         ],
