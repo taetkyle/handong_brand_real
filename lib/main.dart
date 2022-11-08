@@ -177,7 +177,6 @@ class _HisPangExtState extends State<HisPangExt> {
               icon: Icon(
                 Icons.shopping_cart_outlined,
                 size: 30,
-                color: Colors.grey,
               ),
               label: '장바구니'),
         ],
