@@ -11,6 +11,6 @@ class catagorispage extends StatefulWidget {
 class _catagorispageState extends State<catagorispage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(child: Text("바뀜"));
   }
 }
