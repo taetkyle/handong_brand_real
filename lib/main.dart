@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:his_brand_cupang/cupanghomepage.dart';
 import 'package:his_brand_cupang/mycupangpage.dart';
 import 'searchpage.dart';
 import 'catagorispage.dart';
@@ -6,7 +7,20 @@ import 'searchpage.dart';
 import 'shoppingcart.dart';
 
 void main() {
-  runApp(HisPang());
+  runApp(
+    MaterialApp(
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => const cupanghomepage(),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/search': (context) => const searchpage(),
+        '/catagoris': (context) => const catagorispage(),
+        'mycupang': (context) => const mycupangpage(),
+        'shoppingcart': (context) => shoppingcart()
+      },
+    ),
+  );
 }
 
 class HisPang extends StatefulWidget {
@@ -177,7 +191,6 @@ class _HisPangExtState extends State<HisPangExt> {
               icon: Icon(
                 Icons.shopping_cart_outlined,
                 size: 30,
-                color: Colors.grey,
               ),
               label: '장바구니'),
         ],
@@ -190,6 +203,22 @@ class _HisPangExtState extends State<HisPangExt> {
           );
         },
       ),
+    );
+  }
+}
+
+class name extends StatefulWidget {
+  const name({super.key});
+
+  @override
+  State<name> createState() => _nameState();
+}
+
+class _nameState extends State<name> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [],
     );
   }
 }
