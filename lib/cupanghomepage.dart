@@ -11,6 +11,8 @@ class cupanghomepage extends StatefulWidget {
 class _cupanghomepageState extends State<cupanghomepage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(title: Text('안녕')),
+    );
   }
 }
