@@ -3,11 +3,11 @@ import 'package:his_brand_cupang/cupanghomepage.dart';
 import 'package:his_brand_cupang/mycupangpage.dart';
 import 'searchpage.dart';
 import 'catagorispage.dart';
-import 'searchpage.dart';
 import 'shoppingcart.dart';
 
 void main() {
-  runApp(
+  runApp(HisPang()
+      /*
     MaterialApp(
       initialRoute: '/',
       routes: {
@@ -19,8 +19,8 @@ void main() {
         'mycupang': (context) => const mycupangpage(),
         'shoppingcart': (context) => shoppingcart()
       },
-    ),
-  );
+    ),*/
+      );
 }
 
 class HisPang extends StatefulWidget {
