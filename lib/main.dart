@@ -4,6 +4,8 @@ import 'package:his_brand_cupang/mycupangpage.dart';
 import 'searchpage.dart';
 import 'catagorispage.dart';
 import 'shoppingcart.dart';
+import 'cupanghomepage.dart';
+import 'subpage.dart';
 
 void main() {
   runApp(

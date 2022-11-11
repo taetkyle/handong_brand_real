@@ -12,7 +12,9 @@ class _searchpageState extends State<searchpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+      ),
       body: Container(),
     );
   }

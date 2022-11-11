@@ -11,6 +11,8 @@ class mycupangpage extends StatefulWidget {
 class _mycupangpageState extends State<mycupangpage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Text('my cupang page'),
+    );
   }
 }
