@@ -11,13 +11,13 @@ class shoppingcart extends StatefulWidget {
 class _shoppingcartState extends State<shoppingcart> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Container(),
-      bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(icon: Icon(Icons.abc_sharp), label: 'dd'),
-        BottomNavigationBarItem(icon: Icon(Icons.abc_sharp), label: 'hh'),
-      ]),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('장바구니'),
+        ),
+        body: Container(),
+      ),
     );
   }
 }

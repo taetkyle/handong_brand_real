@@ -11,11 +11,12 @@ class searchpage extends StatefulWidget {
 class _searchpageState extends State<searchpage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(
+        child: Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
       ),
       body: Container(),
-    );
+    ));
   }
 }

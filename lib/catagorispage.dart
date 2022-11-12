@@ -13,7 +13,8 @@ class catagorispage extends StatefulWidget {
 class _catagorispageState extends State<catagorispage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(
+        child: Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -417,6 +418,6 @@ class _catagorispageState extends State<catagorispage> {
           ],
         ),
       ),
-    );
+    ));
   }
 }
