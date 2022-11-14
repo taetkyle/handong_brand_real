@@ -5,6 +5,7 @@ import 'catagorispage.dart';
 import 'mycupangpage.dart';
 import 'shoppingcart.dart';
 import 'subpage.dart';
+import 'searchpage.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -46,8 +47,6 @@ class _HomepageState extends State<Homepage> {
                               Text("             "),
                               RichText(
                                 text: TextSpan(
-                                  // Note: Styles for TextSpans must be explicitly defined.
-                                  // Child text spans will inherit styles from parent
                                   style: TextStyle(
                                     fontSize: 32.0,
                                     color: Colors.black,
@@ -94,34 +93,44 @@ class _HomepageState extends State<Homepage> {
                             ],
                           ),
                           PreferredSize(
-                            preferredSize: Size.fromHeight(48.0),
-                            child: Container(
-                              padding: EdgeInsets.all(10),
-                              margin: EdgeInsets.all(10),
-                              child: Row(
-                                children: <Widget>[
-                                  Icon(Icons.search),
-                                  Expanded(
-                                    child: Text(
-                                      " 쿠팡에서 검색하세요!",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.bold),
-                                    ),
+                              preferredSize: Size.fromHeight(48.0),
+                              child: GestureDetector(
+                                child: Container(
+                                  padding: EdgeInsets.all(10),
+                                  margin: EdgeInsets.all(10),
+                                  child: Row(
+                                    children: <Widget>[
+                                      Icon(Icons.search),
+                                      Expanded(
+                                        child: Text(
+                                          " 쿠팡에서 검색하세요!",
+                                          style: TextStyle(
+                                              fontSize: 17,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                      Opacity(
+                                        child: Icon(Icons.refresh),
+                                        opacity: 0,
+                                      ),
+                                    ],
                                   ),
-                                  Opacity(
-                                    child: Icon(Icons.refresh),
-                                    opacity: 0,
-                                  ),
-                                ],
-                              ),
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(2),
-                                  border: Border.all(
-                                      width: 0.7, color: Colors.black)),
-                            ),
-                          ),
+                                  decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(2),
+                                      border: Border.all(
+                                          width: 0.7, color: Colors.black)),
+                                ),
+                                onTap: () {
+                                  (() => Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => searchpage(),
+                                        ),
+                                      ));
+                                },
+                                // )),
+                              ))
                         ]),
                       ),
                       Container(
