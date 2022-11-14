@@ -92,9 +92,10 @@ class _HomepageState extends State<Homepage> {
                               ),
                             ],
                           ),
+
                           PreferredSize(
                               preferredSize: Size.fromHeight(48.0),
-                              child: GestureDetector(
+                              child: TextButton(
                                 child: Container(
                                   padding: EdgeInsets.all(10),
                                   margin: EdgeInsets.all(10),
@@ -106,7 +107,8 @@ class _HomepageState extends State<Homepage> {
                                           " 쿠팡에서 검색하세요!",
                                           style: TextStyle(
                                               fontSize: 17,
-                                              fontWeight: FontWeight.bold),
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.grey),
                                         ),
                                       ),
                                       Opacity(
@@ -121,16 +123,24 @@ class _HomepageState extends State<Homepage> {
                                       border: Border.all(
                                           width: 0.7, color: Colors.black)),
                                 ),
-                                onTap: () {
-                                  (() => Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) => searchpage(),
-                                        ),
-                                      ));
+                                onPressed: () {
+                                  setState(() {
+                                    currentIndex = 1;
+                                  });
                                 },
-                                // )),
-                              ))
+                                style: ElevatedButton.styleFrom(
+                                  splashFactory: NoSplash.splashFactory,
+                                ),
+                              )),
+                          // onTap: () {
+                          //   (() => Navigator.push(
+                          //         context,
+                          //         MaterialPageRoute(
+                          //           builder: (context) => searchpage(),
+                          //         ),
+                          //       ));
+                          // },
+                          // )),
                         ]),
                       ),
                       Container(
@@ -373,11 +383,14 @@ class _HomepageState extends State<Homepage> {
                                               'assets/images/15.png'),
                                           iconSize: scroll_icon_size,
                                           onPressed: () {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (context) =>
-                                                        catagorispage()));
+                                            setState(() {
+                                              currentIndex = 0;
+                                            });
+                                            // Navigator.push(
+                                            //     context,
+                                            //     MaterialPageRoute(
+                                            //         builder: (context) =>
+                                            //             catagorispage()));
                                           }),
                                     ],
                                   ),

@@ -1,6 +1,21 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
 
+class searchpage extends StatefulWidget {
+  const searchpage({super.key});
+
+  @override
+  State<searchpage> createState() => _searchpageState();
+}
+
+class _searchpageState extends State<searchpage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold();
+  }
+}
+
+
 // class searchpage extends SearchDelegate {
 //   @override
 //   Widget? buildLeading(BuildContext context) => IconButton(
@@ -20,17 +35,3 @@ import '../main.dart';
 //   @override
 //   Widget buildSuggestions(BuildContext context) => Container();
 // }
-
-class searchpage extends StatefulWidget {
-  const searchpage({super.key});
-
-  @override
-  State<searchpage> createState() => _searchpageState();
-}
-
-class _searchpageState extends State<searchpage> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}

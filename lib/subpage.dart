@@ -36,12 +36,12 @@ class _subpageState extends State<subpage> {
                         Icons.view_headline,
                         size: 30,
                       ),
-                      // onTap: (() => Navigator.push(
-                      //       context,
-                      //       MaterialPageRoute(
-                      //         builder: (context) => catagorispage(),
-                      //       ),
-                      //     )),
+                      onTap: (() => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => catagorispage(),
+                            ),
+                          )),
                     ),
                     label: '카테고리'),
                 BottomNavigationBarItem(
