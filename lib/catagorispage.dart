@@ -1,4 +1,3 @@
-import 'dart:ffi';
 import 'subpage.dart';
 import 'package:flutter/material.dart';
 import '../main.dart';
@@ -134,19 +133,22 @@ class _catagorispageState extends State<catagorispage> {
                 children: [
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/34.jpg'),
-                          iconSize: 200,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/34.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   ),
                   VerticalDivider(
@@ -155,19 +157,22 @@ class _catagorispageState extends State<catagorispage> {
                   ),
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/35.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/35.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   )
                 ],
@@ -184,19 +189,22 @@ class _catagorispageState extends State<catagorispage> {
                 children: [
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/36.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/36.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   ),
                   VerticalDivider(
@@ -205,19 +213,22 @@ class _catagorispageState extends State<catagorispage> {
                   ),
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/37.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/37.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   )
                 ],
@@ -234,19 +245,22 @@ class _catagorispageState extends State<catagorispage> {
                 children: [
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/38.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/38.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   ),
                   VerticalDivider(
@@ -255,19 +269,22 @@ class _catagorispageState extends State<catagorispage> {
                   ),
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/39.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/39.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   )
                 ],
@@ -284,19 +301,22 @@ class _catagorispageState extends State<catagorispage> {
                 children: [
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/40.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/40.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   ),
                   VerticalDivider(
@@ -305,19 +325,22 @@ class _catagorispageState extends State<catagorispage> {
                   ),
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/41.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/41.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   )
                 ],
@@ -334,19 +357,22 @@ class _catagorispageState extends State<catagorispage> {
                 children: [
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/42.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/42.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   ),
                   VerticalDivider(
@@ -355,19 +381,22 @@ class _catagorispageState extends State<catagorispage> {
                   ),
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/43.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/43.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   )
                 ],
@@ -384,19 +413,22 @@ class _catagorispageState extends State<catagorispage> {
                 children: [
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/44.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/44.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   ),
                   VerticalDivider(
@@ -405,19 +437,22 @@ class _catagorispageState extends State<catagorispage> {
                   ),
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/45.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/45.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   )
                 ],
@@ -434,19 +469,22 @@ class _catagorispageState extends State<catagorispage> {
                 children: [
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/46.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/46.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   ),
                   VerticalDivider(
@@ -455,19 +493,22 @@ class _catagorispageState extends State<catagorispage> {
                   ),
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/47.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/47.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   )
                 ],
@@ -484,19 +525,22 @@ class _catagorispageState extends State<catagorispage> {
                 children: [
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/48.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/48.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   ),
                   VerticalDivider(
@@ -505,19 +549,22 @@ class _catagorispageState extends State<catagorispage> {
                   ),
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/49.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/49.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   )
                 ],
@@ -534,19 +581,22 @@ class _catagorispageState extends State<catagorispage> {
                 children: [
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/50.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/50.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   ),
                   VerticalDivider(
@@ -555,19 +605,22 @@ class _catagorispageState extends State<catagorispage> {
                   ),
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/51.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/51.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   )
                 ],
@@ -584,19 +637,22 @@ class _catagorispageState extends State<catagorispage> {
                 children: [
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/52.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/52.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   ),
                   VerticalDivider(
@@ -605,19 +661,22 @@ class _catagorispageState extends State<catagorispage> {
                   ),
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/53.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/53.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   )
                 ],
@@ -634,19 +693,22 @@ class _catagorispageState extends State<catagorispage> {
                 children: [
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/54.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/54.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   ),
                   VerticalDivider(
@@ -655,19 +717,22 @@ class _catagorispageState extends State<catagorispage> {
                   ),
                   Flexible(
                     flex: 1,
-                    child: Container(
-                      color: Color.fromARGB(255, 249, 248, 248),
-                      height: 35,
-                      child: IconButton(
-                          icon: Image.asset('assets/images/55.jpg'),
-                          iconSize: 500,
-                          onPressed: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) => subpage(),
-                              ),
-                            );
-                          }),
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => subpage(),
+                          ),
+                        );
+                      },
+                      child: Ink(
+                        height: 35,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/images/55.jpg'),
+                                fit: BoxFit.cover)),
+                      ),
                     ),
                   )
                 ],

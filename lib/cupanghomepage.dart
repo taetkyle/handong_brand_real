@@ -8,17 +8,18 @@ import 'subpage.dart';
 import 'searchpage.dart';
 
 class Homepage extends StatefulWidget {
-  const Homepage({super.key});
+  // const Homepage({super.key, this.currentIndex = 2});
+  // final int currentIndex;
 
   @override
   State<Homepage> createState() => _HomepageState();
 }
 
 class _HomepageState extends State<Homepage> {
-  int currentIndex = 2;
   double scroll_icon_size = 62;
   PageController controller = PageController(initialPage: 0);
-
+  var ctime;
+  int currentIndex = 2;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -112,7 +113,10 @@ class _HomepageState extends State<Homepage> {
                                         ),
                                       ),
                                       Opacity(
-                                        child: Icon(Icons.refresh),
+                                        child: Icon(
+                                          Icons.refresh,
+                                          color: Colors.grey,
+                                        ),
                                         opacity: 0,
                                       ),
                                     ],
@@ -596,6 +600,7 @@ class _HomepageState extends State<Homepage> {
                             ? mycupangpage()
                             : null),
         bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
           selectedItemColor: Color.fromARGB(255, 27, 109, 176),
           unselectedItemColor: Colors.grey,
           showSelectedLabels: true,

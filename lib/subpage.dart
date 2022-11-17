@@ -39,7 +39,7 @@ class _subpageState extends State<subpage> {
                       onTap: (() => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => catagorispage(),
+                              builder: (context) => Homepage(),
                             ),
                           )),
                     ),
