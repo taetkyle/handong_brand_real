@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:his_brand_cupang/nologin_mycupangpage.dart';
 import 'package:his_brand_cupang/searchpage.dart';
 import '../main.dart';
 import 'catagorispage.dart';
@@ -6,10 +7,11 @@ import 'mycupangpage.dart';
 import 'shoppingcart.dart';
 import 'subpage.dart';
 import 'searchpage.dart';
+import 'nologin_mycupangpage.dart';
 
 class Homepage extends StatefulWidget {
-  // const Homepage({super.key, this.currentIndex = 2});
-  // final int currentIndex;
+  const Homepage({super.key, this.login_status = 0});
+  final int login_status;
 
   @override
   State<Homepage> createState() => _HomepageState();
@@ -596,9 +598,11 @@ class _HomepageState extends State<Homepage> {
                     ? searchpage()
                     : currentIndex == 0
                         ? catagorispage()
-                        : currentIndex == 3
+                        : (currentIndex == 3 && widget.login_status == 1)
                             ? mycupangpage()
-                            : null),
+                            : (currentIndex == 3 && widget.login_status == 0)
+                                ? nologin_mycupangpage()
+                                : null),
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           selectedItemColor: Color.fromARGB(255, 27, 109, 176),
