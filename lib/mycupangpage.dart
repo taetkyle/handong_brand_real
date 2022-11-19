@@ -23,45 +23,101 @@ class _mycupangpageState extends State<mycupangpage> {
               children: [
                 SizedBox(height: 20),
                 Center(
-                    child: Container(
-                  height: 70,
-                  width: 70,
-                  child: FittedBox(
-                    child: FloatingActionButton(
-                      onPressed: () {},
-                      backgroundColor: Colors.white,
-                      child: Icon(
-                        Icons.person_outline,
-                        color: Colors.blue,
-                        size: 50,
+                  child: Container(
+                    height: 70,
+                    width: 70,
+                    child: FittedBox(
+                      child: FloatingActionButton(
+                        onPressed: () {},
+                        backgroundColor: Colors.white,
+                        child: Icon(
+                          Icons.person_outline,
+                          color: Colors.blue,
+                          size: 50,
+                        ),
                       ),
                     ),
                   ),
-                ))
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 30,
+                    ),
+                    Expanded(
+                      child: Container(
+                        child: GestureDetector(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                '박경태',
+                                style: TextStyle(fontSize: 30),
+                              ),
+                              Text('일반고객')
+                            ],
+                          ),
+                        ),
+                      ),
+                      flex: 4,
+                    ),
+                    SizedBox(
+                      width: 30,
+                    ),
+                    Expanded(
+                      child: Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            GestureDetector(
+                              child: Text('쿠페이 머니\n0원'),
+                              onTap: () {},
+                            ),
+                            VerticalDivider(
+                              width: 20,
+                              thickness: 1,
+                              color: Colors.black,
+                            ),
+                            GestureDetector(
+                              child: Text('쿠팡캐시\n0원'),
+                              onTap: () {},
+                            )
+                          ],
+                        ),
+                      ),
+                      flex: 6,
+                    ),
+                    SizedBox(
+                      width: 30,
+                    )
+                  ],
+                )
               ],
             ),
           ),
-          Container(
-            height: 30,
-            color: Color.fromARGB(255, 249, 248, 248),
+          SizedBox(
+            height: 20,
           ),
           Container(
-            height: 400,
+            height: 300,
             color: Colors.white,
             child: Column(children: [
-              Text('최근 찾던 사움의 연관 상품'),
+              Text(
+                '최근 찾던 상품의 연관 상품',
+                style: TextStyle(fontSize: 17),
+              ),
               Container(
-                height: 200,
-                color: Colors.orange,
-                child: Center(
-                  child: Text('horizontal list로 돌리기'),
-                ),
+                height: 100,
               ),
             ]),
           ),
           SizedBox(height: 10),
           GestureDetector(
             child: Container(
+              color: Colors.white,
               child: Row(children: [
                 SizedBox(
                   width: 10,
@@ -84,6 +140,7 @@ class _mycupangpageState extends State<mycupangpage> {
           Divider(height: 1),
           GestureDetector(
             child: Container(
+              color: Colors.white,
               child: Row(children: [
                 SizedBox(
                   width: 10,
@@ -106,6 +163,7 @@ class _mycupangpageState extends State<mycupangpage> {
           Divider(height: 1),
           GestureDetector(
             child: Container(
+              color: Colors.white,
               child: Row(children: [
                 SizedBox(
                   width: 10,
@@ -128,6 +186,7 @@ class _mycupangpageState extends State<mycupangpage> {
           Divider(height: 1),
           GestureDetector(
             child: Container(
+              color: Colors.white,
               child: Row(children: [
                 SizedBox(
                   width: 10,
@@ -150,6 +209,7 @@ class _mycupangpageState extends State<mycupangpage> {
           Divider(height: 1),
           GestureDetector(
             child: Container(
+              color: Colors.white,
               child: Row(children: [
                 SizedBox(
                   width: 10,
@@ -172,6 +232,7 @@ class _mycupangpageState extends State<mycupangpage> {
           Divider(height: 1),
           GestureDetector(
             child: Container(
+              color: Colors.white,
               child: Row(children: [
                 SizedBox(
                   width: 10,
@@ -194,6 +255,7 @@ class _mycupangpageState extends State<mycupangpage> {
           Divider(height: 1),
           GestureDetector(
             child: Container(
+              color: Colors.white,
               child: Row(children: [
                 SizedBox(
                   width: 10,
@@ -216,6 +278,7 @@ class _mycupangpageState extends State<mycupangpage> {
           Divider(height: 1),
           GestureDetector(
             child: Container(
+              color: Colors.white,
               child: Row(children: [
                 SizedBox(
                   width: 10,
@@ -238,6 +301,7 @@ class _mycupangpageState extends State<mycupangpage> {
           Divider(height: 1),
           GestureDetector(
             child: Container(
+              color: Colors.white,
               child: Row(children: [
                 SizedBox(
                   width: 10,
@@ -260,6 +324,7 @@ class _mycupangpageState extends State<mycupangpage> {
           Divider(height: 1),
           GestureDetector(
             child: Container(
+              color: Colors.white,
               child: Row(children: [
                 SizedBox(
                   width: 10,

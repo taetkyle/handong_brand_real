@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:his_brand_cupang/cupanghomepage.dart';
 import 'package:his_brand_cupang/mycupangpage.dart';
+import 'package:his_brand_cupang/usagepage.dart';
 import 'searchpage.dart';
 import 'catagorispage.dart';
 import 'shoppingcart.dart';
@@ -30,33 +31,36 @@ void main() {
       ),
     );
   };
-  runApp(startpage());
+  runApp(MaterialApp(
+    home: DoubleBack(
+      message: 'press back again to close',
+      child: beforesplash(),
+    ),
+    debugShowCheckedModeBanner: false,
+  ));
 }
 
-class startpage extends StatefulWidget {
-  @override
-  State<startpage> createState() => _startpageState();
-}
+// class startpage extends StatefulWidget {
+//   @override
+//   State<startpage> createState() => _startpageState();
+// }
 
-class _startpageState extends State<startpage> {
-  bool allowclose = false;
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'handongcupang',
-        home: DoubleBack(
-          condition: allowclose,
-          onConditionFail: () {
-            setState(() {
-              allowclose = true;
-            });
-          },
-          child: splash(),
-          waitForSecondBackPress: 3,
-        ));
-  }
-}
+// class _startpageState extends State<startpage> {
+//   bool allowclose = false;
+//   @override
+//   Widget build(BuildContext context) {
+//     return DoubleBack(
+//       condition: allowclose,
+//       onConditionFail: () {
+//         setState(() {
+//           allowclose = true;
+//         });
+//       },
+//       child: beforesplash(),
+//       waitForSecondBackPress: 3,
+//     );
+//   }
+// }
 
 class beforesplash extends StatefulWidget {
   @override
@@ -66,28 +70,28 @@ class beforesplash extends StatefulWidget {
 class _beforesplashState extends State<beforesplash> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-      body: Container(
-        child: Column(
-          children: [
-            SizedBox(height: 40),
-            TextButton(
-              onPressed: () {
-                (() => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => curio(),
-                      ),
-                    ));
-              },
-              child: Text("버튼입니다"),
-            )
-          ],
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          child: Column(
+            children: [
+              SizedBox(height: 40),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => curio(),
+                    ),
+                  );
+                },
+                child: Text("쿠팡"),
+              ),
+            ],
+          ),
         ),
-        color: Colors.yellow,
       ),
-    ));
+    );
   }
 }
 
@@ -99,7 +103,40 @@ class curio extends StatefulWidget {
 class _curioState extends State<curio> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Text('welcome'));
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            '쿠팡',
+          ),
+          elevation: 0,
+        ),
+        body: Column(
+          children: [
+            SizedBox(
+              height: 40,
+            ),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => splash(),
+                    ),
+                  );
+                },
+                child: Text('realapp')),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => usagepage(),
+                    ),
+                  );
+                },
+                child: Text('simulation'))
+          ],
+        ));
   }
 }
 

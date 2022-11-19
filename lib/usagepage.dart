@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
+import 'howtosearch.dart';
 
 class usagepage extends StatefulWidget {
   const usagepage({super.key});
@@ -67,13 +68,19 @@ class _usagepageState extends State<usagepage> {
                     flex: 9,
                   ),
                   Expanded(
-                    child: Icon(Icons.shopping_cart_outlined),
+                    child: Icon(Icons.arrow_forward_ios_outlined),
                     flex: 1,
                   )
                 ]),
                 height: 50,
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (BuildContext context) => howtosearch(),
+                  ),
+                );
+              },
             ),
             Divider(height: 1),
             GestureDetector(

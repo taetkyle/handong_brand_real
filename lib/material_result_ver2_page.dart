@@ -6,14 +6,14 @@ import 'material_choosepage.dart';
 
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class hongsam extends StatefulWidget {
-  const hongsam({super.key});
+class hongsam2 extends StatefulWidget {
+  const hongsam2({super.key});
 
   @override
-  State<hongsam> createState() => _hongsamState();
+  State<hongsam2> createState() => _hongsam2State();
 }
 
-class _hongsamState extends State<hongsam> {
+class _hongsam2State extends State<hongsam2> {
   PageController controller = PageController(initialPage: 0);
   var change_icon = Icon(
     Icons.favorite_border_outlined,
@@ -160,7 +160,7 @@ class _hongsamState extends State<hongsam> {
                         width: 15,
                       ),
                       Text(
-                        '고당도 껍질체 먹는 정품 꿀사과 5kg\n당일수확',
+                        '고당도 껍질체 먹는 가정용 꿀사과 5kg\n당일수확',
                         style: TextStyle(fontSize: 20),
                       )
                     ],
@@ -185,7 +185,7 @@ class _hongsamState extends State<hongsam> {
                                     children: [
                                       Text('선택사항'),
                                       Text(
-                                        '정품 사과 5kg (16과~18과)',
+                                        '가정용 사과 5kg (16과~18과)',
                                         style: TextStyle(
                                             fontSize: 18,
                                             fontWeight: FontWeight.bold),
@@ -258,7 +258,7 @@ class _hongsamState extends State<hongsam> {
                         width: 15,
                       ),
                       Text(
-                        '32,900원',
+                        '23,900원',
                         style: TextStyle(
                             color: Colors.red,
                             fontSize: 25,
