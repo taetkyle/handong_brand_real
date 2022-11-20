@@ -154,12 +154,20 @@ class _howto_searchpageState extends State<howto_searchpage> {
                         border: Border.all(width: 5, color: Colors.orange)),
                   ),
                   onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (BuildContext context) =>
-                            howto_material_searching(),
-                      ),
-                    );
+                    if (myController.text == '사과') {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              material_searching(),
+                        ),
+                      );
+                    } else {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => nomaterial(),
+                        ),
+                      );
+                    }
                   },
                 )),
           ],
