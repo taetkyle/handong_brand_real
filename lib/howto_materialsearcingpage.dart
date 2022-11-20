@@ -69,7 +69,7 @@ class _howto_material_searchingState extends State<howto_material_searching> {
               GestureDetector(
                 child: Icon(Icons.arrow_back_ios_new),
                 onTap: () {
-                  // Navigator.of(context).pop();
+                  Navigator.of(context).pop();
                 },
               ),
               SizedBox(
@@ -154,9 +154,30 @@ class _howto_material_searchingState extends State<howto_material_searching> {
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Text(
-                  '도움말',
-                  style: TextStyle(fontSize: 30),
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 8,
+                      child: Text(
+                        '                   도움말',
+                        style: TextStyle(fontSize: 30),
+                      ),
+                    ),
+                    Expanded(
+                        flex: 2,
+                        child: GestureDetector(
+                          child: Icon(
+                            Icons.cancel_outlined,
+                            size: 40,
+                          ),
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                        )),
+                    SizedBox(
+                      width: 10,
+                    )
+                  ],
                 ),
                 SizedBox(
                   height: 10,

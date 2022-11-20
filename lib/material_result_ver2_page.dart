@@ -241,7 +241,7 @@ class _hongsam2State extends State<hongsam2> {
                         width: 15,
                       ),
                       Text(
-                        '34% ',
+                        '52% ',
                       ),
                       SizedBox(
                         width: 5,
@@ -418,7 +418,7 @@ class _hongsam2State extends State<hongsam2> {
                   },
                 ),
                 SizedBox(
-                  width: 30,
+                  width: 17,
                 ),
                 // TextButton(
                 //   child: Container(
@@ -434,7 +434,7 @@ class _hongsam2State extends State<hongsam2> {
                         borderRadius: BorderRadius.circular(2),
                         color: Colors.blue,
                       ),
-                      width: 280,
+                      width: 275,
                       child: Center(
                           child: Text(
                         '구매하기',
@@ -445,7 +445,7 @@ class _hongsam2State extends State<hongsam2> {
                       context: context,
                       builder: (BuildContext context) {
                         return Container(
-                          height: 250,
+                          height: 270,
                           color: Colors.white,
                           child: Column(
                             children: [
@@ -460,7 +460,12 @@ class _hongsam2State extends State<hongsam2> {
                                   SizedBox(
                                     width: 15,
                                   ),
-                                  Text('정품 사과 5kg (16~18과)')
+                                  Text(
+                                    '가정용 사과 5kg (16~18과)',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18),
+                                  )
                                 ],
                               ),
                               SizedBox(
@@ -471,11 +476,16 @@ class _hongsam2State extends State<hongsam2> {
                                   SizedBox(
                                     width: 15,
                                   ),
-                                  Text('34%'),
+                                  Text('52%'),
                                   SizedBox(
                                     width: 3,
                                   ),
-                                  Text('50,000원')
+                                  Text('50,000원',
+                                      style: TextStyle(
+                                          decoration:
+                                              TextDecoration.lineThrough,
+                                          color: Color.fromARGB(
+                                              255, 126, 126, 126)))
                                 ],
                               ),
                               Row(
@@ -483,7 +493,13 @@ class _hongsam2State extends State<hongsam2> {
                                   SizedBox(
                                     width: 15,
                                   ),
-                                  Text('32,900원')
+                                  Text(
+                                    '23,900원',
+                                    style: TextStyle(
+                                        color: Colors.red,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  )
                                 ],
                               ),
                               Row(
@@ -521,10 +537,10 @@ class _hongsam2State extends State<hongsam2> {
                                   height: 50,
                                   child: Row(
                                     children: [
-                                      SizedBox(width: 12),
+                                      SizedBox(width: 7),
                                       TextButton(
                                         child: Container(
-                                            width: 170,
+                                            width: 155,
                                             decoration: BoxDecoration(
                                                 border: Border.all(
                                                     color: Colors.blueAccent)),
@@ -544,7 +560,7 @@ class _hongsam2State extends State<hongsam2> {
                                       ),
                                       TextButton(
                                         child: Container(
-                                            width: 170,
+                                            width: 155,
                                             color: Colors.blue,
                                             child: Center(
                                                 child: Text(

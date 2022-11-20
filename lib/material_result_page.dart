@@ -418,7 +418,7 @@ class _hongsamState extends State<hongsam> {
                   },
                 ),
                 SizedBox(
-                  width: 30,
+                  width: 18,
                 ),
                 // TextButton(
                 //   child: Container(
@@ -434,7 +434,7 @@ class _hongsamState extends State<hongsam> {
                         borderRadius: BorderRadius.circular(2),
                         color: Colors.blue,
                       ),
-                      width: 280,
+                      width: 275,
                       child: Center(
                           child: Text(
                         '구매하기',
@@ -445,7 +445,7 @@ class _hongsamState extends State<hongsam> {
                       context: context,
                       builder: (BuildContext context) {
                         return Container(
-                          height: 250,
+                          height: 270,
                           color: Colors.white,
                           child: Column(
                             children: [
@@ -460,7 +460,12 @@ class _hongsamState extends State<hongsam> {
                                   SizedBox(
                                     width: 15,
                                   ),
-                                  Text('정품 사과 5kg (16~18과)')
+                                  Text(
+                                    '정품 사과 5kg (16~18과)',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18),
+                                  )
                                 ],
                               ),
                               SizedBox(
@@ -475,7 +480,12 @@ class _hongsamState extends State<hongsam> {
                                   SizedBox(
                                     width: 3,
                                   ),
-                                  Text('50,000원')
+                                  Text('50,000원',
+                                      style: TextStyle(
+                                          decoration:
+                                              TextDecoration.lineThrough,
+                                          color: Color.fromARGB(
+                                              255, 126, 126, 126)))
                                 ],
                               ),
                               Row(
@@ -483,7 +493,13 @@ class _hongsamState extends State<hongsam> {
                                   SizedBox(
                                     width: 15,
                                   ),
-                                  Text('32,900원')
+                                  Text(
+                                    '32,900원',
+                                    style: TextStyle(
+                                        color: Colors.red,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  )
                                 ],
                               ),
                               Row(
@@ -509,7 +525,7 @@ class _hongsamState extends State<hongsam> {
                               Row(
                                 children: [
                                   SizedBox(
-                                    width: 15,
+                                    width: 7,
                                   ),
                                   Text('수요일 11/23 도착 예정\n판매자: 그랜픽')
                                 ],
@@ -524,7 +540,7 @@ class _hongsamState extends State<hongsam> {
                                       SizedBox(width: 12),
                                       TextButton(
                                         child: Container(
-                                            width: 170,
+                                            width: 155,
                                             decoration: BoxDecoration(
                                                 border: Border.all(
                                                     color: Colors.blueAccent)),
@@ -544,7 +560,7 @@ class _hongsamState extends State<hongsam> {
                                       ),
                                       TextButton(
                                         child: Container(
-                                            width: 170,
+                                            width: 155,
                                             color: Colors.blue,
                                             child: Center(
                                                 child: Text(

@@ -3,6 +3,10 @@ import 'package:his_brand_cupang/material_choosepage.dart';
 import '../main.dart';
 import 'material _searchingpage.dart';
 import 'howto_materialsearcingpage.dart';
+import 'nomaterial.dart';
+import 'sanngsu.dart';
+import 'speaker.dart';
+import 'mask.dart';
 
 class howto_searchpage extends StatefulWidget {
   const howto_searchpage({super.key});
@@ -12,6 +16,7 @@ class howto_searchpage extends StatefulWidget {
 }
 
 class _howto_searchpageState extends State<howto_searchpage> {
+  final myController = TextEditingController();
   @override
   void initState() {
     super.initState();
@@ -66,7 +71,7 @@ class _howto_searchpageState extends State<howto_searchpage> {
                 GestureDetector(
                   child: Icon(Icons.arrow_back_ios_new),
                   onTap: () {
-                    // Navigator.of(context).pop();
+                    Navigator.of(context).pop();
                   },
                 ),
                 SizedBox(
@@ -76,6 +81,7 @@ class _howto_searchpageState extends State<howto_searchpage> {
                   child: Container(
                     width: 100,
                     child: TextField(
+                      controller: myController,
                       decoration: InputDecoration(
                         isDense: true, // Added this
                         // contentPadding: EdgeInsets.all(8),
@@ -97,11 +103,38 @@ class _howto_searchpageState extends State<howto_searchpage> {
                 GestureDetector(
                   child: Icon(Icons.search),
                   onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => material_searching(),
-                      ),
-                    );
+                    if (myController.text == '사과') {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              material_searching(),
+                        ),
+                      );
+                    } else if (myController.text == '마스크') {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => mask(),
+                        ),
+                      );
+                    } else if (myController.text == '생수') {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => sanngsu(),
+                        ),
+                      );
+                    } else if (myController.text == '스피커') {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => speaker(),
+                        ),
+                      );
+                    } else {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => nomaterial(),
+                        ),
+                      );
+                    }
                   },
                 ),
                 SizedBox(
@@ -131,6 +164,128 @@ class _howto_searchpageState extends State<howto_searchpage> {
                 )),
           ],
         ),
+        SizedBox(
+          height: 20,
+        ),
+        Text('검색가능 품목'),
+        SizedBox(
+          height: 30,
+        ),
+        Row(
+          children: [
+            SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              child: GestureDetector(
+                child: Container(
+                  child: Center(
+                    child: Text(
+                      '사과',
+                    ),
+                  ),
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 246, 246, 246),
+                      border: Border.all(width: 0.7, color: Colors.grey)),
+                  height: 40,
+                ),
+                onTap: () {
+                  // Navigator.of(context).push(
+                  //   MaterialPageRoute(
+                  //     builder: (BuildContext context) => material_searching(),
+                  //   ),
+                  // );
+                },
+              ),
+              flex: 1,
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              child: GestureDetector(
+                child: Container(
+                  child: Center(
+                    child: Text(
+                      '마스크',
+                    ),
+                  ),
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 246, 246, 246),
+                      border: Border.all(width: 0.7, color: Colors.grey)),
+                  height: 40,
+                ),
+                onTap: () {
+                  // Navigator.of(context).push(
+                  //   MaterialPageRoute(
+                  //     builder: (BuildContext context) => mask(),
+                  //   ),
+                  // );
+                },
+              ),
+              flex: 1,
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              child: GestureDetector(
+                child: Container(
+                  child: Center(
+                    child: Text(
+                      '스피커',
+                    ),
+                  ),
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 246, 246, 246),
+                      border: Border.all(width: 0.7, color: Colors.grey)),
+                  height: 40,
+                ),
+                onTap: () {
+                  // Navigator.of(context).push(
+                  //   MaterialPageRoute(
+                  //     builder: (BuildContext context) => speaker(),
+                  //   ),
+                  // );
+                },
+              ),
+              flex: 1,
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Expanded(
+              child: GestureDetector(
+                child: Container(
+                  child: Center(
+                    child: Text(
+                      '생수',
+                    ),
+                  ),
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      color: Color.fromARGB(255, 246, 246, 246),
+                      border: Border.all(width: 0.7, color: Colors.grey)),
+                  height: 40,
+                ),
+                onTap: () {
+                  // Navigator.of(context).push(
+                  //   MaterialPageRoute(
+                  //     builder: (BuildContext context) => sanngsu(),
+                  //   ),
+                  // );
+                },
+              ),
+              flex: 1,
+            ),
+            SizedBox(
+              width: 10,
+            )
+          ],
+        )
       ],
     )));
   }
@@ -147,9 +302,30 @@ class _howto_searchpageState extends State<howto_searchpage> {
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Text(
-                  '도움말',
-                  style: TextStyle(fontSize: 30),
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 8,
+                      child: Text(
+                        '                   도움말',
+                        style: TextStyle(fontSize: 30),
+                      ),
+                    ),
+                    Expanded(
+                        flex: 2,
+                        child: GestureDetector(
+                          child: Icon(
+                            Icons.cancel_outlined,
+                            size: 40,
+                          ),
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                        )),
+                    SizedBox(
+                      width: 10,
+                    )
+                  ],
                 ),
                 SizedBox(
                   height: 10,

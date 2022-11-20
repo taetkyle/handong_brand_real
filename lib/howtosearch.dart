@@ -79,7 +79,7 @@ class _howtosearchState extends State<howtosearch> {
                                 // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   SizedBox(
-                                    width: 85,
+                                    width: 45,
                                   ),
                                   SizedBox(
                                     width: 50,
@@ -187,7 +187,7 @@ class _howtosearchState extends State<howtosearch> {
                                       child: GestureDetector(
                                         child: Container(
                                           padding: EdgeInsets.all(10),
-                                          width: 360,
+                                          width: 340,
                                           height: 55,
                                           decoration: BoxDecoration(
                                               border: Border.all(
@@ -542,9 +542,30 @@ class _howtosearchState extends State<howtosearch> {
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Text(
-                  '도움말',
-                  style: TextStyle(fontSize: 30),
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 8,
+                      child: Text(
+                        '                   도움말',
+                        style: TextStyle(fontSize: 30),
+                      ),
+                    ),
+                    Expanded(
+                        flex: 2,
+                        child: GestureDetector(
+                          child: Icon(
+                            Icons.cancel_outlined,
+                            size: 40,
+                          ),
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                        )),
+                    SizedBox(
+                      width: 10,
+                    )
+                  ],
                 ),
                 SizedBox(
                   height: 10,
