@@ -34,7 +34,7 @@ void main() {
   runApp(MaterialApp(
     home: DoubleBack(
       message: 'press back again to close',
-      child: beforesplash(),
+      child: first_splash(),
     ),
     debugShowCheckedModeBanner: false,
   ));
@@ -62,6 +62,31 @@ void main() {
 //   }
 // }
 
+class first_splash extends StatefulWidget {
+  // const first_splash({super.key});
+
+  @override
+  State<first_splash> createState() => _first_splashState();
+}
+
+class _first_splashState extends State<first_splash> {
+  @override
+  Widget build(BuildContext context) {
+    return new SplashScreen(
+        seconds: 3,
+        navigateAfterSeconds: new beforesplash(),
+        title: new Text(
+          'GranPick',
+          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
+        ),
+        image: new Image.asset('assets/icons/brand_logo.jpg'),
+        backgroundColor: Colors.white,
+        styleTextUnderTheLoader: new TextStyle(),
+        photoSize: 100.0,
+        loaderColor: Colors.red);
+  }
+}
+
 class beforesplash extends StatefulWidget {
   @override
   State<beforesplash> createState() => _beforesplashState();
@@ -76,16 +101,29 @@ class _beforesplashState extends State<beforesplash> {
           child: Column(
             children: [
               SizedBox(height: 40),
-              TextButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => curio(),
+              Row(
+                children: [
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Expanded(
+                    child: GestureDetector(
+                      child: Image.asset('assets/images/start_coupang.jpg'),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => curio(),
+                          ),
+                        );
+                      },
                     ),
-                  );
-                },
-                child: Text("쿠팡"),
+                    flex: 1,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  )
+                ],
               ),
             ],
           ),
@@ -130,7 +168,7 @@ class _curioState extends State<curio> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => usagepage(),
+                      builder: (context) => simulation_splash(),
                     ),
                   );
                 },
@@ -151,11 +189,34 @@ class _splashState extends State<splash> {
     return new SplashScreen(
         seconds: 3,
         navigateAfterSeconds: new Homepage(),
-        title: new Text(
-          'GranPick',
-          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
-        ),
-        image: new Image.asset('assets/icons/brand_logo.jpg'),
+        // title: new Text(
+        //   'GranPick',
+        //   style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
+        // ),
+        image: new Image.asset('assets/icons/coupang.png'),
+        backgroundColor: Colors.white,
+        styleTextUnderTheLoader: new TextStyle(),
+        photoSize: 100.0,
+        loaderColor: Colors.red);
+  }
+}
+
+class simulation_splash extends StatefulWidget {
+  @override
+  State<simulation_splash> createState() => _simulation_splashState();
+}
+
+class _simulation_splashState extends State<simulation_splash> {
+  @override
+  Widget build(BuildContext context) {
+    return new SplashScreen(
+        seconds: 3,
+        navigateAfterSeconds: new usagepage(),
+        // title: new Text(
+        //   'GranPick',
+        //   style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
+        // ),
+        image: new Image.asset('assets/icons/coupang.png'),
         backgroundColor: Colors.white,
         styleTextUnderTheLoader: new TextStyle(),
         photoSize: 100.0,

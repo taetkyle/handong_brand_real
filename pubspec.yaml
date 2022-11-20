@@ -42,6 +42,7 @@ dependencies:
   double_back_to_close: ^2.0.0
   page_view_indicators: ^2.0.0
   flutter_rating_bar: ^4.0.1
+  flutter_native_splash: ^2.2.14
 
 
 
@@ -50,6 +51,17 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: "^0.10.0"
+
+
+
+
+flutter_native_splash: 
+  image: 'assets/images/cupang.png'
+  color: "#f9f9f9"
+  image_dark: 'assets/images/cupang.png'
+  color_dark: "#000000"
+
+
 
 flutter_icons:
   android: "launcher_icon"
