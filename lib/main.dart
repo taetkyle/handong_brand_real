@@ -1,6 +1,4 @@
-// @dart=2.9
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:his_brand_cupang/cupanghomepage.dart';
 import 'package:his_brand_cupang/mycupangpage.dart';
@@ -10,8 +8,6 @@ import 'catagorispage.dart';
 import 'shoppingcart.dart';
 import 'cupanghomepage.dart';
 import 'subpage.dart';
-import 'package:splashscreen/splashscreen.dart';
-import 'package:double_back_to_close/double_back_to_close.dart';
 
 class shopping_matarial {
   final Widget matarial;
@@ -34,60 +30,35 @@ void main() {
     );
   };
   runApp(MaterialApp(
-    home: DoubleBack(
-      message: 'press back again to close',
-      child: first_splash(),
-    ),
+    home: beforesplash(),
     debugShowCheckedModeBanner: false,
   ));
 }
 
-// class startpage extends StatefulWidget {
+// class first_splash extends StatefulWidget {
+//   // const first_splash({super.key});
+
 //   @override
-//   State<startpage> createState() => _startpageState();
+//   State<first_splash> createState() => _first_splashState();
 // }
 
-// class _startpageState extends State<startpage> {
-//   bool allowclose = false;
+// class _first_splashState extends State<first_splash> {
 //   @override
 //   Widget build(BuildContext context) {
-//     return DoubleBack(
-//       condition: allowclose,
-//       onConditionFail: () {
-//         setState(() {
-//           allowclose = true;
-//         });
-//       },
-//       child: beforesplash(),
-//       waitForSecondBackPress: 3,
-//     );
+//     return new SplashScreen(
+//         seconds: 3,
+//         navigateAfterSeconds: new beforesplash(),
+//         title: new Text(
+//           'GranPick',
+//           style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
+//         ),
+//         image: new Image.asset('assets/icons/brand_logo.jpg'),
+//         backgroundColor: Colors.white,
+//         styleTextUnderTheLoader: new TextStyle(),
+//         photoSize: 100.0,
+//         loaderColor: Colors.green);
 //   }
 // }
-
-class first_splash extends StatefulWidget {
-  // const first_splash({super.key});
-
-  @override
-  State<first_splash> createState() => _first_splashState();
-}
-
-class _first_splashState extends State<first_splash> {
-  @override
-  Widget build(BuildContext context) {
-    return new SplashScreen(
-        seconds: 3,
-        navigateAfterSeconds: new beforesplash(),
-        title: new Text(
-          'GranPick',
-          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
-        ),
-        image: new Image.asset('assets/icons/brand_logo.jpg'),
-        backgroundColor: Colors.white,
-        styleTextUnderTheLoader: new TextStyle(),
-        photoSize: 100.0,
-        loaderColor: Colors.green);
-  }
-}
 
 class beforesplash extends StatefulWidget {
   @override
@@ -99,139 +70,145 @@ class _beforesplashState extends State<beforesplash> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
-          child: Column(
-            children: [
-              Container(
-                padding: EdgeInsets.all(3),
-                decoration: BoxDecoration(
-                    border: Border(
-                        bottom: BorderSide(color: Colors.grey, width: 2))),
-                child: Row(
+        body: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              children: [
+                Container(
+                  padding: EdgeInsets.all(3),
+                  decoration: BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(color: Colors.grey, width: 2))),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                        child: Image.asset(
+                          'assets/images/word_granpick_cut.png',
+                          fit: BoxFit.fitHeight,
+                        ),
+                        flex: 1,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(height: 40),
+                Row(
                   children: [
                     SizedBox(
-                      width: 10,
+                      width: 15,
                     ),
                     Expanded(
-                      child: Image.asset(
-                        'assets/images/word_granpick_cut.png',
-                        fit: BoxFit.fitHeight,
+                      child: GestureDetector(
+                        child:
+                            Image.asset('assets/images/cupang_cut_button.png'),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => curio(),
+                            ),
+                          );
+                        },
                       ),
                       flex: 1,
                     ),
                     SizedBox(
-                      width: 10,
+                      width: 15,
                     )
                   ],
                 ),
-              ),
-              SizedBox(height: 40),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      child: Image.asset('assets/images/cupang_cut_button.png'),
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => curio(),
-                          ),
-                        );
-                      },
+                SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 15,
                     ),
-                    flex: 1,
-                  ),
-                  SizedBox(
-                    width: 15,
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      child: Image.asset('assets/images/single_button_cut.png'),
-                      onTap: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     builder: (context) => curio(),
-                        //   ),
-                        // );
-                      },
+                    Expanded(
+                      child: GestureDetector(
+                        child:
+                            Image.asset('assets/images/single_button_cut.png'),
+                        onTap: () {
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (context) => curio(),
+                          //   ),
+                          // );
+                        },
+                      ),
+                      flex: 1,
                     ),
-                    flex: 1,
-                  ),
-                  SizedBox(
-                    width: 15,
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      child: Image.asset('assets/images/single_button_cut.png'),
-                      onTap: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     builder: (context) => curio(),
-                        //   ),
-                        // );
-                      },
+                    SizedBox(
+                      width: 15,
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 15,
                     ),
-                    flex: 1,
-                  ),
-                  SizedBox(
-                    width: 15,
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      child: Image.asset('assets/images/single_button_cut.png'),
-                      onTap: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     builder: (context) => curio(),
-                        //   ),
-                        // );
-                      },
+                    Expanded(
+                      child: GestureDetector(
+                        child:
+                            Image.asset('assets/images/single_button_cut.png'),
+                        onTap: () {
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (context) => curio(),
+                          //   ),
+                          // );
+                        },
+                      ),
+                      flex: 1,
                     ),
-                    flex: 1,
-                  ),
-                  SizedBox(
-                    width: 15,
-                  )
-                ],
-              ),
-            ],
+                    SizedBox(
+                      width: 15,
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Row(
+                  children: [
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Expanded(
+                      child: GestureDetector(
+                        child:
+                            Image.asset('assets/images/single_button_cut.png'),
+                        onTap: () {
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (context) => curio(),
+                          //   ),
+                          // );
+                        },
+                      ),
+                      flex: 1,
+                    ),
+                    SizedBox(
+                      width: 15,
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -373,18 +350,7 @@ class splash extends StatefulWidget {
 class _splashState extends State<splash> {
   @override
   Widget build(BuildContext context) {
-    return new SplashScreen(
-        seconds: 3,
-        navigateAfterSeconds: new Homepage(),
-        // title: new Text(
-        //   'GranPick',
-        //   style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
-        // ),
-        image: new Image.asset('assets/icons/coupang.png'),
-        backgroundColor: Colors.white,
-        styleTextUnderTheLoader: new TextStyle(),
-        photoSize: 100.0,
-        loaderColor: Colors.red);
+    return Homepage();
   }
 }
 
@@ -396,17 +362,6 @@ class simulation_splash extends StatefulWidget {
 class _simulation_splashState extends State<simulation_splash> {
   @override
   Widget build(BuildContext context) {
-    return new SplashScreen(
-        seconds: 3,
-        navigateAfterSeconds: new usagepage(),
-        // title: new Text(
-        //   'GranPick',
-        //   style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 40.0),
-        // ),
-        image: new Image.asset('assets/icons/coupang.png'),
-        backgroundColor: Colors.white,
-        styleTextUnderTheLoader: new TextStyle(),
-        photoSize: 100.0,
-        loaderColor: Colors.red);
+    return usagepage();
   }
 }

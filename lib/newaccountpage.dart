@@ -144,14 +144,14 @@ class _newaccountpageState extends State<newaccountpage> {
                                 hintText: '비밀번호',
                               ),
                             ),
-                            flex: 9,
+                            flex: 10,
                           ),
                           Expanded(
                             child: TextButton(
                               child: Text(_obscureText ? "Show" : "Hide"),
                               onPressed: _toggle,
                             ),
-                            flex: 2,
+                            flex: 3,
                           ),
                         ],
                       ),

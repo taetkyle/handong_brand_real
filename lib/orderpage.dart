@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:his_brand_cupang/newaccountpage.dart';
 import '../main.dart';
+import 'order_choose.dart';
+import 'payment_choose.dart';
 
 class orderpage extends StatefulWidget {
   const orderpage({super.key});
@@ -26,7 +28,7 @@ class _orderpageState extends State<orderpage> {
             },
           ),
           title: Text(
-            '                 주문 / 결제',
+            '주문 / 결제',
             style: TextStyle(color: Colors.black),
           ),
         ),
@@ -44,42 +46,51 @@ class _orderpageState extends State<orderpage> {
                       flex: 1,
                     ),
                     Expanded(
-                      child: Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 229, 229, 229),
-                            borderRadius: BorderRadius.circular(2),
-                            border:
-                                Border.all(width: 0.7, color: Colors.black)),
-                        height: 80,
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Text(
-                                    '배송지',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  Text(
-                                    '선택해 주세요',
-                                    style: TextStyle(color: Colors.blue),
-                                  )
-                                ],
+                      child: GestureDetector(
+                        child: Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 229, 229, 229),
+                              borderRadius: BorderRadius.circular(2),
+                              border:
+                                  Border.all(width: 0.7, color: Colors.black)),
+                          height: 80,
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      '배송지',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      '선택해 주세요',
+                                      style: TextStyle(color: Colors.blue),
+                                    )
+                                  ],
+                                ),
+                                flex: 15,
                               ),
-                              flex: 15,
-                            ),
-                            Expanded(
-                                child:
-                                    Icon(Icons.keyboard_arrow_right_outlined))
-                          ],
+                              Expanded(
+                                  child:
+                                      Icon(Icons.keyboard_arrow_right_outlined))
+                            ],
+                          ),
                         ),
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (BuildContext context) => order_choose(),
+                            ),
+                          );
+                        },
                       ),
                       flex: 20,
                     ),
@@ -91,7 +102,13 @@ class _orderpageState extends State<orderpage> {
                     )
                   ],
                 ),
-                onTap: () {},
+                onTap: () {
+                  // Navigator.of(context).push(
+                  //   MaterialPageRoute(
+                  //     builder: (BuildContext context) => order_choose(),
+                  //   ),
+                  // );
+                },
               ),
               // Row(
               //   children: [
@@ -133,42 +150,52 @@ class _orderpageState extends State<orderpage> {
                       flex: 1,
                     ),
                     Expanded(
-                      child: Container(
-                        padding: EdgeInsets.all(10),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 233, 233, 233),
-                            borderRadius: BorderRadius.circular(2),
-                            border:
-                                Border.all(width: 0.7, color: Colors.black)),
-                        height: 80,
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  Text(
-                                    '결제수단',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                  Text(
-                                    '선택해 주세요',
-                                    style: TextStyle(color: Colors.blue),
-                                  )
-                                ],
+                      child: GestureDetector(
+                        child: Container(
+                          padding: EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 233, 233, 233),
+                              borderRadius: BorderRadius.circular(2),
+                              border:
+                                  Border.all(width: 0.7, color: Colors.black)),
+                          height: 80,
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SizedBox(
+                                      height: 5,
+                                    ),
+                                    Text(
+                                      '결제수단',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      '선택해 주세요',
+                                      style: TextStyle(color: Colors.blue),
+                                    )
+                                  ],
+                                ),
+                                flex: 15,
                               ),
-                              flex: 15,
-                            ),
-                            Expanded(
-                                child:
-                                    Icon(Icons.keyboard_arrow_right_outlined))
-                          ],
+                              Expanded(
+                                  child:
+                                      Icon(Icons.keyboard_arrow_right_outlined))
+                            ],
+                          ),
                         ),
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  payment_choose(),
+                            ),
+                          );
+                        },
                       ),
                       flex: 20,
                     ),
@@ -180,7 +207,6 @@ class _orderpageState extends State<orderpage> {
                     )
                   ],
                 ),
-                onTap: () {},
               ),
               // Row(
               //   children: [
